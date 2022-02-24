@@ -20,12 +20,11 @@ const alturaTriangulo = 5.5;
 console.log("Las medidadas del triangulo son: "+
 "\nlado1 del triangulo: "+ladoTrianguloA+
 "\nlado2 del triangulo: "+ladoTrianguloB +
-"\nlado3 del triangulo: "+ladoTrianguloC+
 "\nbase del triangulo: "+baseTriangulo+
 "\nla altura del triangulo es: "+alturaTriangulo
 );
 
-const perimetroTriangulo = ladoTrianguloA + ladoTrianguloB+ladoTrianguloC;
+const perimetroTriangulo = ladoTrianguloA + ladoTrianguloB+baseTriangulo;
 console.log("El perimetro del triangul es: "+perimetroTriangulo);
 
 const areaTriangulo = (baseTriangulo*alturaTriangulo)/2;
