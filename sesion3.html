@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FígurasGeometricas | Practicas JS</title>
+    <link rel="stylesheet" href="./sesion3.css">
+    <script src="./sesion3.js"></script>
+</head>
+<body>
+    <h1 class="title-main">Fíguras geométricas</h1>
+    <div class="container">        
+        <div class="container-calculator container-quadrate">
+            <h2 class="title-geometric">Fígura cuadrado</h2>
+            <form class="formulario" action="/">
+                <label class="label-info" for="inputCuadrado">Ingrese la medida del lado del cuadrado en cm</label>
+                <input type="number" id="inputCuadrado" class="input-info">
+                <button class="principal-button perimeter-button" type="button" onclick="calcularPerimetroCuadrado()">
+                    Calcular el perimetro
+                </button>
+                <button class="principal-button area-button" type="button" onclick="calcularAreaCuadrado()">
+                    Calcular el área
+                </button>
+            </form>
+        </div>
+    
+        <div class="container-calculator container-circle">
+            <h2 class="title-geometric">Fígura circulo</h2>
+            <form class="formulario" action="/">
+                <label class="label-info" for="inputCircle">Ingrese la medida del radio en cm</label>
+                <input type="number" id="inputCircle" class="input-info">
+
+                <button class="principal-button perimeter-button" type="button" onclick="calcularPerimetroCirculo()">
+                    Calcular el perimetro
+                </button>
+                <button class="principal-button area-button" type="button" onclick="calcularAreaCirculo()">
+                    Calcular el área
+                </button>
+            </form>
+        </div>
+
+        <div class="container-calculator container-triangle">
+            <h2 class="title-geometric">Fígura triangulo</h2>
+            <form class="formulario" action="/">
+                <label class="label-info" for="inputTriangulo1">Ingrese la medida del lado 1 del triangulo en cm</label>
+                <input type="number" id="inputTriangulo1" class="input-info">
+
+                <label class="label-info" for="inputTriangulo2">Ingrese la medida del lado 2 del triangulo en cm</label>
+                <input type="number" id="inputTriangulo2" class="input-info">
+
+                <label class="label-info" for="inputTriangulo3">Ingrese la medida del lado 3 del triangulo en cm</label>
+                <input type="number" id="inputTriangulo3" class="input-info">
+
+                <button class="principal-button perimeter-button" type="button" onclick="calcularPerimetroCuadrado()">
+                    Calcular el perimetro
+                </button>
+                <button class="principal-button area-button" type="button" onclick="calcularAreaCuadrado()">
+                    Calcular el área
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
