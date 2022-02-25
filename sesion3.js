@@ -150,7 +150,7 @@ function calcularAlturaTriangulo(){
 
     if(esIsosceles[0]){
         
-        const altura = Math.sqrt(esIsosceles[1]**2 - "(esIsosceles[2]**2)/4);
+        const altura = Math.sqrt(esIsosceles[1]**2 - (esIsosceles[2]**2)/4);
         alert("La altura del triangulo es: "+altura+"cm");
     }
     else{
