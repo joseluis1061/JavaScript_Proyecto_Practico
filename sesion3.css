@@ -46,7 +46,9 @@ html{
 .container-calculator:hover .formulario> .label-info{
     background-color: rgb(228, 221, 161);
 }
-
+.container-triangle{
+    height: auto;
+}
 .formulario{
     display: flex;
     flex-direction: column;
@@ -78,6 +80,12 @@ html{
     font-weight: bold;
     padding: 4px;
 }
+.formulario-triangle label:nth-child(n+2){
+    display: none;
+    margin: 0;
+    background-color: red;
+}
+
 .principal-button{
     height: 6rem;
     border-radius: 1rem;

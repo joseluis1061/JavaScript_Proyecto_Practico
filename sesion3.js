@@ -23,6 +23,8 @@ console.groupEnd()
 
 console.group("Triangulo")
 
+
+/*
 //Lados del triangulo
 const ladoTrianguloA = 5;
 const ladoTrianguloB = 5;
@@ -52,6 +54,7 @@ function calculoAreaTriangulo(baseTriangulo,alturaTriangulo){
 calculoAreaTriangulo(baseTriangulo,alturaTriangulo);
 
 console.groupEnd()
+*/
 
 // Circulo
 console.group("Circulo");
@@ -79,6 +82,7 @@ infoCirculo(radio, diametro1)
 function calculoPerimetroCirculo(radio){
     const perimetroCirculo = calculoDiametro(radio)*pi;
     console.log("El perimetro del circulo es: "+perimetroCirculo);
+    //alert("El perimetro del circulo es: "+perimetroCirculo);
 }
 calculoPerimetroCirculo(radio)
 
@@ -86,9 +90,12 @@ calculoPerimetroCirculo(radio)
 function calculoAreaCirculo(radio){
     const areaCirculo = pi * radio**2;
     console.log("El área del circulo es: "+areaCirculo);
+    //alert("El área del circulo es: "+areaCirculo);
 }
 calculoAreaCirculo(radio)
 console.groupEnd();
+
+// CUADRADO
 
 //Usando el metodo onclick para ejecutar información de html en js
 function calcularPerimetroCuadrado(){
@@ -100,7 +107,53 @@ function calcularPerimetroCuadrado(){
 
 function calcularAreaCuadrado(){
     //Capturar el elemento input del formulario
-    const ladoCuadrado2 = document.getElementById("inputCuadrado");
-    const valueCuadrado = ladoCuadrado2.value;
+    const ladoCuadrado = document.getElementById("inputCuadrado");
+    const valueCuadrado = ladoCuadrado.value;
     calculoAreaCuadrado(valueCuadrado);
 }
+
+// CIRCULO
+function calcularPerimetroCirculo(){
+    const radioCirculo = document.getElementById("inputCircle");
+    const radio = radioCirculo.value;
+    calculoPerimetroCirculo(radio);
+};
+
+function calcularAreaCirculo(){
+    const radioCirculo = document.getElementById("inputCircle");
+    const radio = radioCirculo.value;
+    calculoAreaCirculo(radio);
+};
+
+// TRIANGULO
+
+function validarTrianguloIsosceles(ladoa,ladob,ladoc){
+    if(ladoa == ladob){
+        return [true, ladoa, ladoc]; //esIsosceles, ladoIgual, Base
+    }
+    else if (ladoa == ladoc) {
+        return [true, ladoa, ladob];
+    } else if(ladob == ladoc){
+        alert("Ingreso validacion "+ladoa+" "+ladob+" "+ladoc);
+        return [true, ladob, ladoa];
+    }
+    else{
+        return [false]; //No es isosceles
+    }
+};
+
+function calcularAlturaTriangulo(){
+    const ladoa = document.getElementById("inputTriangulo1").value;
+    const ladob = document.getElementById("inputTriangulo2").value;
+    const ladoc = document.getElementById("inputTriangulo3").value;
+    const esIsosceles = validarTrianguloIsosceles(ladoa, ladob,ladoc);
+
+    if(esIsosceles[0]){
+        
+        const altura = Math.sqrt(esIsosceles[1]**2 - "(esIsosceles[2]**2)/4);
+        alert("La altura del triangulo es: "+altura+"cm");
+    }
+    else{
+        alert("Las medidas no son de un triangulo isósceles");
+    }
+};

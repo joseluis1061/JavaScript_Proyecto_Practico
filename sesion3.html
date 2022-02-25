@@ -24,6 +24,24 @@
                 </button>
             </form>
         </div>
+
+        <div class="container-calculator container-triangle">
+            <h2 class="title-geometric">Fígura triangulo isósceles</h2>
+            <form class="formulario formulario-triangle" action="/">
+                <label class="label-info" for="inputTriangulo1">Ingrese la medida de los lados del triangulo en cm</label>
+                <input type="number" id="inputTriangulo1" class="input-info">
+
+                <label class="label-info" for="inputTriangulo2">Lado B</label>
+                <input type="number" id="inputTriangulo2" class="input-info">
+
+                <label class="label-info" for="inputTriangulo3">Lado C</label>
+                <input type="number" id="inputTriangulo3" class="input-info">
+
+                <button class="principal-button perimeter-button" type="button" onclick="calcularAlturaTriangulo()">
+                    Calcular la altura
+                </button>
+            </form>
+        </div>
     
         <div class="container-calculator container-circle">
             <h2 class="title-geometric">Fígura circulo</h2>
@@ -40,26 +58,6 @@
             </form>
         </div>
 
-        <div class="container-calculator container-triangle">
-            <h2 class="title-geometric">Fígura triangulo</h2>
-            <form class="formulario" action="/">
-                <label class="label-info" for="inputTriangulo1">Ingrese la medida del lado 1 del triangulo en cm</label>
-                <input type="number" id="inputTriangulo1" class="input-info">
-
-                <label class="label-info" for="inputTriangulo2">Ingrese la medida del lado 2 del triangulo en cm</label>
-                <input type="number" id="inputTriangulo2" class="input-info">
-
-                <label class="label-info" for="inputTriangulo3">Ingrese la medida del lado 3 del triangulo en cm</label>
-                <input type="number" id="inputTriangulo3" class="input-info">
-
-                <button class="principal-button perimeter-button" type="button" onclick="calcularPerimetroCuadrado()">
-                    Calcular el perimetro
-                </button>
-                <button class="principal-button area-button" type="button" onclick="calcularAreaCuadrado()">
-                    Calcular el área
-                </button>
-            </form>
-        </div>
-    </div>
+    </div> <!-- Fin container -->
 </body>
 </html>
