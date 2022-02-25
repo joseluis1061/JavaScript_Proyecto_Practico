@@ -134,7 +134,6 @@ function validarTrianguloIsosceles(ladoa,ladob,ladoc){
     else if (ladoa == ladoc) {
         return [true, ladoa, ladob];
     } else if(ladob == ladoc){
-        alert("Ingreso validacion "+ladoa+" "+ladob+" "+ladoc);
         return [true, ladob, ladoa];
     }
     else{
@@ -149,8 +148,7 @@ function calcularAlturaTriangulo(){
     const esIsosceles = validarTrianguloIsosceles(ladoa, ladob,ladoc);
 
     if(esIsosceles[0]){
-        
-        const altura = Math.sqrt(esIsosceles[1]**2 - "(esIsosceles[2]**2)/4);
+        const altura = Math.sqrt(esIsosceles[1]**2 - (esIsosceles[2]**2)/4);
         alert("La altura del triangulo es: "+altura+"cm");
     }
     else{
