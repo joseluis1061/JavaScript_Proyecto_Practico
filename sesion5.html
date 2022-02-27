@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FígurasGeometricas | Practicas JS</title>
+    <link rel="stylesheet" href="./sesion5.css">
+    
+</head>
+<body>
+    <div class="principal-container">
+
+        <div class="container">
+            <header class="header">
+                <h1 class="title-main">
+                Estadistica: Media, mediana y moda
+                </h1>
+                <p>Este es el tercer taller del Curso Práctico de JavaScript.</p>
+            </header>
+            
+            <section class="section-calculator">
+                <h2 class="title-secundary">Estadistica de una serie de datos</h2>
+            
+                <form class="formulario">
+                <label for="InputList">Escribe una serie de números separados por comas</label>
+                <input class="input-form" id="InputList" type="text" placeholder="Pej: 1,2,3,4,.."/>
+            
+                <button class="primary-button" type="button" onclick="onClickButtonStatistic()">
+                    Calcular Estadistica
+                </button>
+            
+                <p class="box-result" id="ResultP"></p>
+                </form>
+            </section>
+        </div>   
+    </div>
+    <script src="./sesion5.js"></script>
+</body>
+</html>
