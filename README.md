@@ -32,7 +32,7 @@ onclick = "Nombre de función en js"
 
 - Cuarto: Por el momento usaremos los alert como método para desplegar la información. Sin embargo mas adelante usamos la misma estructura de etiquetas html para mostrarle la información al usuario.
 
-# Sesion 5: Funciones estadisticas
+## Sesion #5: Funciones estadisticas
 
 - Se pide mediante un input que el usuario entregue un array. Cada dato sera separado por comas. 
 
