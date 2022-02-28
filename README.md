@@ -31,3 +31,15 @@ onclick = "Nombre de función en js"
 - Tercero: Definimos la función que nombramos en html dentro de onclick dentro de nuestro código html. En su interior debemos ejecutar los procesos que deseamos ejecutar. 
 
 - Cuarto: Por el momento usaremos los alert como método para desplegar la información. Sin embargo mas adelante usamos la misma estructura de etiquetas html para mostrarle la información al usuario.
+
+# Sesion 5: Funciones estadisticas
+
+- Se pide mediante un input que el usuario entregue un array. Cada dato sera separado por comas. 
+
+- La ventana cuenta con un diseño responsivo adaptativo mediante CSS Y HTML. 
+
+- Para separar el array en valores númericos lo hacemos mediante la función .split(",");
+
+- Se calcula la media, mediana y moda para el array.
+
+- Se usan las funciones, map, splice, parceFloat, Object.values(), Object.entries(), source, filter para llevar a cabo las tareas especificadas. 
