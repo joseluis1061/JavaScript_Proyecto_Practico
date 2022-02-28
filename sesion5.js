@@ -35,31 +35,34 @@ function calculoMediana(dataListNumbers){
     const mediana = numberSort[DatoMedioArray-1];
     return mediana;
   }
-
 };
 
 // Con esta función comprobamos si es un sistema multimodal
 function multiModa(lista1Array){
-  posiciones = [];
-  for(const i = lista1Array.length-1; i>0; i--){
-    //Comparo si tengo datos con igual cantidad de repeticiones
-    if((i == lista1Array.length-1) & (lista1Array[i][1]==lista1Array[i-1][1])){
+  //El ultimo dato contiene el maximo sera nuestro valor de referencia
+  maximoRepeticiones = lista1Array[lista1Array.length-1][1]
 
-    }
-    else if(lista1Array[i][1]==lista1Array[i-1][1]){
-      posiciones.push(lista1Array[i][0]);
-    }else{
-      break;
-    }
-  }
-  return posiciones;
+  // Guardaresmos todos los números con igules repeticiones que el maximo
+  // Se guardan las parejas dato y repetición
+  posiciones = lista1Array.filter(dato=>{
+    return dato[1]=== maximoRepeticiones;
+  });
+
+  // Retornamos solo los valores que se repiten un maximo
+  const moda = posiciones.map(element => {
+    return element[0]
+  });
+
+  return (moda);
 };
 
 function calculoModa(dataListNumbers){
+
   //Primero ordenamos los datos en forma ascendente 
   const numberSort = dataListNumbers.sort(function(a,b){
     return a-b;
   });
+
   //Lista con conteo de datos
   const listCount = {}
   //Conteo cuantos numeros se repiten
@@ -73,18 +76,21 @@ function calculoModa(dataListNumbers){
       listCount[dato] = 1;
     }
   });
+
+
   // Object.entries retorna el objeto en arrays de parejas
-  // Luego los ordenamos para tomar el ultimo daoto como el que mas se repite
+  // Luego los ordenamos para tomar el ultimo dato como el que mas se repite
   const lista1Array = Object.entries(listCount).sort(
     function (elementoA, elementoB) {
-      //Solo toma los datos de valor no la clave
+      //Queda un array con los datos de la clave valor en un solo array
+      //[[clave1, valor1],[clave2, valo2],...[claven, valorn]]
       return elementoA[1] - elementoB[1];
     }
   );
-
   // La moda se puede repetir debemos comprobar si teenmos mas de una moda
-  const moda multiModa(lista1Array);
-  console.log(moda)
+  const valores = multiModa(lista1Array);
+  const moda = [valores, maximoRepeticiones];
+  return moda;
 };
 
 function onClickButtonStatistic(){
@@ -98,7 +104,10 @@ function onClickButtonStatistic(){
   const moda = calculoModa(dataListNumbers);
 
   const resultsPrint = document.getElementById("ResultP");
-  resultsPrint.innerText="Resultados: \nMedia = "+media
-  +"\nMediana = "+mediana
-  +"\nModa = "+moda;
+  resultsPrint.innerText="Resultados: \n\nMedia = "+media
+  +"\n\nMediana = "+mediana
+  +"\n\nModa:\nValor(es): "+moda[0]+"\nRepeticiónes: "+moda[1];
 };
+
+
+
